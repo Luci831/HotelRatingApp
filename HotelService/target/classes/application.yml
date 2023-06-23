@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: HOTEL-SERVICE
+  config:
+    import: configserver:http://localhost:8085 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Microservice
+    username: postgres
+    password: Krishna12#
+    
+  jpa:
+    
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+      
+okta:
+  oauth2:
+    issuer: https://dev-91501614.okta.com/oauth2/default
+    audience: api://default
+    
+    
+
+
+    
